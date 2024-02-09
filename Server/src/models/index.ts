@@ -1,21 +1,6 @@
-import { Schema, model } from "mongoose";
+import userModel from "./userSchema";
+import questionModel from "./questionSchema";
+import snippetModel from "./SnippetSchema";
+import testCaseModel from "./testCaseSchema";
 
-const userSchema = new Schema({
-    name: {
-        type: String,
-        require: true,
-    },
-    username: {
-        type: String,
-        require: true,
-        unique: true,
-    },
-    email:{
-        type:String,
-        require:true
-    },
-    password: {
-        type: String,
-        require: true,
-    },
-});
+export { userModel, questionModel, snippetModel, testCaseModel };
